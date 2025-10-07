@@ -1,0 +1,20 @@
+{
+  "name": "day-planner",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/NagarajNayak15/Day-Planner#readme",
+  "bugs": {
+    "url": "https://github.com/NagarajNayak15/Day-Planner/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NagarajNayak15/Day-Planner.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
