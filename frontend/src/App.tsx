@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import Calendar from 'react-calendar'
-import './App.css'
+import { QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router-dom';
+import { queryClient } from '@/lib/queryClient';
+import { AuthProvider } from '@/context/AuthContext';
+import { ToastViewport } from '@/components/ui/Toast';
+import { AppRoutes } from '@/routes/AppRoutes';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export function App() {
   return (
-    <>
-    <div>
-      <Calendar></Calendar>
-    </div>
-        
-    </>
-  )
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <AuthProvider>
+          <AppRoutes />
+          <ToastViewport />
+        </AuthProvider>
+      </BrowserRouter>
+    </QueryClientProvider>
+  );
 }
-
-export default App
