@@ -14,10 +14,7 @@ export function createApp(): Application {
 
   app.use(helmet());
   app.use(
-    cors({
-      origin: env.clientOrigin,
-      credentials: true,
-    })
+    cors()
   );
   app.use(express.json({ limit: '1mb' }));
   app.use(cookieParser());
